@@ -201,7 +201,6 @@ def main():
             os.system(f"start https://guns.lol/{username}")
     else:
         parser.print_help()
-        parser.print_help()
 
 if __name__ == "__main__":
     main()
