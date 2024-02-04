@@ -4,6 +4,9 @@
 
 This Python script fetches various information about a user from the guns.lol website. It can retrieve their links, profile information, premium features, sources (background image, audio, avatar), what they're doing, and more.
 
+[My guns.lol profile](https://guns.lol/M58)
+
+
 ## Usage
 ```Bash
 python3 main.py -u <username> [options]
