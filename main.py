@@ -1,7 +1,7 @@
 # Author: M58
 # Version: 1.0
 # Description: This tool is used to fetch the informations of a user from guns.lol
-# Usage: python3 main.py -u <username> -f -l -a -i -p -s -w
+# Usage: python3 main.py -u <username> -f -l -a -i -p -s -w -e
 
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
