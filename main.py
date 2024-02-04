@@ -157,7 +157,7 @@ def get_user_info(username):
         print(Fore.YELLOW + f"   [>] Discord ID: {response.json()['pageProps']['data']['discord_id']}" + Style.RESET_ALL)
     except KeyError:
         print(Fore.RED + "   [!] Something went wrong, are you sure the username / alias is correct (use -f to check)" + Style.RESET_ALL)
-
+        
 def main():
     """Main function of the tool to fetch the informations of a user from guns.lol
     """
@@ -171,32 +171,36 @@ def main():
     parser.add_argument("-s", "--sources", help="Get the sources of the user", action="store_true")
     parser.add_argument("-w", "--what", help="What the user is doing", action="store_true")
     parser.add_argument("-e", "--everything", help="Get everything", action="store_true")
+    parser.add_argument("-o", "--open", help="Open the user's profil in the browser", action="store_true")
     args = parser.parse_args()
 
     if args.username:
         username = args.username
         if args.free:
             free_username_alias(username)
-        elif args.links:
+        if args.links:
             get_all_links(username)
-        elif args.all:
+        if args.all:
             response = requests.get(url + username + extention)
             print(response.json())
-        elif args.info:
+        if args.info:
             get_user_info(username)
-        elif args.premium:
+        if args.premium:
             get_user_premium_info(username)
-        elif args.sources:
+        if args.sources:
             get_sources(username)
-        elif args.what:
+        if args.what:
             get_what_user_is_doing(username)
-        elif args.everything:
+        if args.everything:
             get_user_info(username)
             get_user_premium_info(username)
             get_sources(username)
             get_what_user_is_doing(username)
             get_all_links(username)
+        if args.open:
+            os.system(f"start https://guns.lol/{username}")
     else:
+        parser.print_help()
         parser.print_help()
 
 if __name__ == "__main__":
