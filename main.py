@@ -170,6 +170,7 @@ def main():
     parser.add_argument("-p", "--premium", help="Get the premium informations of the user", action="store_true")
     parser.add_argument("-s", "--sources", help="Get the sources of the user", action="store_true")
     parser.add_argument("-w", "--what", help="What the user is doing", action="store_true")
+    parser.add_argument("-e", "--everything", help="Get everything", action="store_true")
     args = parser.parse_args()
 
     if args.username:
@@ -189,6 +190,12 @@ def main():
             get_sources(username)
         elif args.what:
             get_what_user_is_doing(username)
+        elif args.everything:
+            get_user_info(username)
+            get_user_premium_info(username)
+            get_sources(username)
+            get_what_user_is_doing(username)
+            get_all_links(username)
     else:
         parser.print_help()
 
