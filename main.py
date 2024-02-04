@@ -15,9 +15,9 @@ from datetime import datetime
 url = "https://guns.lol/_next/data/Nb1vbrVK2F1PILuaPYlB8/"
 extention = ".json"
 
-os.system("cls" if os.name == "nt" else "clear")
+# os.system("cls" if os.name == "nt" else "clear")
 
-tprint("Guns.lol Informations Fetcher")
+print("Guns.lol Informations Fetcher")
 print("This tool is used to fetch the informations of a user from guns.lol")
 
 def get_all_links(username):
