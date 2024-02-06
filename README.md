@@ -1,4 +1,4 @@
-# Guns.lol Informations Fetcher
+# Guns.lol Informations Fetcher (Before update 😔)
 
 ## Description
 
